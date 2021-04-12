@@ -19,8 +19,8 @@ class UserRegistrationForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class': 'form-control'}))
     email = forms.CharField(max_length=75, widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    password1 = forms.CharField( max_length=100, widget=forms.PasswordInput(attrs={'class':'form-control'}))
-    password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class':'form-control'}))
+    password1 = forms.CharField( label="password",  max_length=100, widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'password'}))
+    password2 = forms.CharField(label ="confirm password", max_length=100,widget=forms.PasswordInput(attrs={'class':'form-control', 'placeholder':'Confirm password'}))
                             
     class Meta:
         model = User
