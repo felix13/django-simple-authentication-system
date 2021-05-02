@@ -16,7 +16,7 @@ def home(request):
 
 def user_login(request):
     form = LoginForm()
-    if request.POST:
+    if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get("username")

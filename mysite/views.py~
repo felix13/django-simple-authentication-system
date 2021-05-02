@@ -26,7 +26,7 @@ def user_login(request):
                 login(request, user)
                 return redirect(request.GET.get('next', 'home'))
             else:
-			    messages.error(request, 'Check your login details and try again',
+                messages.error(request, 'Check your login details and try again',
 			                   extra_tags='alert alert-danger alert-dismissible fade show'
 			                  )
                 return redirect("home")
